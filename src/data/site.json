@@ -1,0 +1,203 @@
+{
+  "seo": {
+    "title": "Ramdhan Setiadhi — Fullstack Web Developer",
+    "description": "Fullstack Web Developer (React / Vue / Node / Laravel) based in Bandung, Indonesia. Portfolio, experience, skills, and certifications.",
+    "ogImage": "/images/hero.svg"
+  },
+  "a11y": {
+    "skipToContentLabel": "Skip to content",
+    "primaryNavLabel": "Primary",
+    "socialLinksLabel": "Social links",
+    "portfolioTagFilterLabel": "Portfolio tag filter",
+    "skillsListLabel": "Skills"
+  },
+  "ui": {
+    "nav": {
+      "brandLabel": "Home"
+    }
+  },
+  "header": {
+    "nav": [
+      { "label": "About", "href": "#about" },
+      { "label": "Skills", "href": "#skills" },
+      { "label": "Certifications", "href": "#certifications" },
+      { "label": "Experience", "href": "#experience" },
+      { "label": "Portfolio", "href": "#portfolio" },
+      { "label": "Contact", "href": "#contact" }
+    ]
+  },
+  "hero": {
+    "name": "Ramdhan Setiadhi",
+    "title": "Fullstack Web Developer (React / Vue / Node / Laravel)",
+    "location": "Bandung, West Java, Indonesia",
+    "tagline": "Fast learner, well-organized, responsible developer with strong experience in team and individual projects.",
+    "profileImage": {
+      "src": "/images/hero.svg",
+      "alt": "Ramdhan Setiadhi profile image"
+    },
+    "ctas": {
+      "primary": { "label": "View Portfolio", "href": "#portfolio" },
+      "secondary": { "label": "Contact Me", "href": "#contact" }
+    }
+  },
+  "about": {
+    "sectionTitle": "About",
+    "paragraphs": [
+      "I am a fast learner, well organized and responsible person with experience in both team and individual projects, as well as organizational leadership.",
+      "I love learning new things and meeting new people in new environments. I am open to collaboration with anyone who shares the same passion for building impactful technology.",
+      "I am well-planned and coordinated, especially in programming. Exploring new technologies to improve my skills, gaming, and traveling are my main interests."
+    ]
+  },
+  "skills": {
+    "sectionTitle": "Skills",
+    "groups": [
+      {
+        "title": "Languages",
+        "items": ["JavaScript", "TypeScript", "Node.js"]
+      },
+      {
+        "title": "Frameworks",
+        "items": [
+          "React.js",
+          "Next.js",
+          "Vue.js",
+          "React Native",
+          "Express.js",
+          "Redux"
+        ]
+      },
+      {
+        "title": "Styling",
+        "items": ["Tailwind CSS", "Bootstrap"]
+      },
+      {
+        "title": "Database",
+        "items": ["PostgreSQL", "MongoDB"]
+      },
+      {
+        "title": "Other",
+        "items": ["Git", "GitHub"]
+      }
+    ]
+  },
+  "certifications": {
+    "sectionTitle": "Certifications",
+    "items": [
+      { "title": "Google Cloud Fundamentals: Core Infrastructure" },
+      { "title": "Serverless Cloud Run Development" },
+      { "title": "Google Cloud Computing Foundations: Data, ML, and AI" },
+      { "title": "Deploy to Kubernetes in Google Cloud" },
+      { "title": "Create and Manage Cloud Resources" }
+    ]
+  },
+  "experience": {
+    "sectionTitle": "Experience",
+    "items": [
+      {
+        "role": "Developer Supervisor",
+        "company": "PT International Services Pacific Cross",
+        "location": "Central Jakarta",
+        "period": "Jan 2026 – Present"
+      },
+      {
+        "role": "Fullstack Web Developer (Freelance)",
+        "company": "Self-Employed",
+        "location": "Indonesia",
+        "period": "Sep 2022 – Present",
+        "bullets": [
+          "Handle web & mobile app projects for clients",
+          "Offer services via Fastwork.id"
+        ]
+      },
+      {
+        "role": "Frontend Developer",
+        "company": "BTS.id – PT Intersolusi Teknologi Asia",
+        "location": "Bandung",
+        "period": "Jan 2023 – Dec 2025"
+      },
+      {
+        "role": "Cloud Computing Cohort",
+        "company": "Bangkit Academy (Google, Tokopedia, Gojek, Traveloka)",
+        "period": "Aug 2023 – Jan 2024"
+      },
+      {
+        "role": "Fullstack Developer",
+        "company": "Atlaz",
+        "location": "Tangerang Selatan",
+        "period": "Oct 2022 – Jan 2023",
+        "bullets": [
+          "Build apps from UI/UX designs",
+          "Improve and maintain systems",
+          "System analysis & team meetings"
+        ]
+      },
+      {
+        "role": "Mechanic Intern",
+        "company": "PT GMF AeroAsia Tbk",
+        "location": "Cengkareng",
+        "period": "Jul 2019 – Sep 2019"
+      }
+    ]
+  },
+  "portfolio": {
+    "sectionTitle": "Portfolio",
+    "intro": "Explore a selection of projects and UI work. Use the tags to quickly filter what you want to see.",
+    "emptyState": "No projects match this tag.",
+    "filter": {
+      "label": "Filter projects by tag",
+      "allLabel": "All"
+    },
+    "links": {
+      "liveLabel": "Live",
+      "repoLabel": "Repo"
+    },
+    "items": [
+      {
+        "id": "project-1",
+        "title": "Product Landing Page",
+        "description": "A responsive landing page with accessible components and a clean layout. Includes a lightweight design system and a component-driven structure.",
+        "tags": ["React", "Tailwind", "Accessibility"],
+        "image": { "src": "/images/project-1.svg", "alt": "Product Landing Page preview" },
+        "liveUrl": "https://example.com",
+        "repoUrl": "https://github.com/your-handle/project-1"
+      },
+      {
+        "id": "project-2",
+        "title": "Dashboard UI",
+        "description": "A dashboard prototype featuring cards, charts placeholders, and keyboard-friendly navigation. Built mobile-first and optimized for clarity.",
+        "tags": ["UI", "React"],
+        "image": { "src": "/images/project-2.svg", "alt": "Dashboard UI preview" },
+        "repoUrl": "https://github.com/your-handle/project-2"
+      },
+      {
+        "id": "project-3",
+        "title": "API Status Monitor",
+        "description": "A small app that displays service status with filtering and detail views. Focused on sensible UX and readable code.",
+        "tags": ["Vite", "Performance"],
+        "image": { "src": "/images/project-3.svg", "alt": "API Status Monitor preview" },
+        "liveUrl": "https://example.com"
+      }
+    ]
+  },
+  "contact": {
+    "sectionTitle": "Contact",
+    "phone": "088219819580",
+    "email": "ramdhansetiadhi@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/ramdhansetiadhi",
+    "buttons": {
+      "emailLabel": "Email Me",
+      "linkedinLabel": "LinkedIn"
+    }
+  },
+  "footer": {
+    "text": "Ramdhan Setiadhi — Fullstack Web Developer",
+    "links": [
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com/in/ramdhansetiadhi",
+        "external": true
+      }
+    ],
+    "copyrightTemplate": "© {year} {name}"
+  }
+}

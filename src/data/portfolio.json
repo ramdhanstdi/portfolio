@@ -1,0 +1,27 @@
+[
+  {
+    "id": "project-1",
+    "title": "Product Landing Page",
+    "description": "A responsive landing page with accessible components and a clean layout. Includes a lightweight design system and a component-driven structure.",
+    "tags": ["React", "Tailwind", "Accessibility"],
+    "image": "/images/project-1.svg",
+    "liveUrl": "https://example.com",
+    "repoUrl": "https://github.com/your-handle/project-1"
+  },
+  {
+    "id": "project-2",
+    "title": "Dashboard UI",
+    "description": "A dashboard prototype featuring cards, charts placeholders, and keyboard-friendly navigation. Built mobile-first and optimized for clarity.",
+    "tags": ["UI", "React"],
+    "image": "/images/project-2.svg",
+    "repoUrl": "https://github.com/your-handle/project-2"
+  },
+  {
+    "id": "project-3",
+    "title": "API Status Monitor",
+    "description": "A small app that displays service status with filtering and detail views. Focused on sensible UX and readable code.",
+    "tags": ["Vite", "Performance"],
+    "image": "/images/project-3.svg",
+    "liveUrl": "https://example.com"
+  }
+]
