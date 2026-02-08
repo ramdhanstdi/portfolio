@@ -2,7 +2,7 @@
   "seo": {
     "title": "Ramdhan Setiadhi — Fullstack Web Developer",
     "description": "Fullstack Web Developer (React / Vue / Node / Laravel) based in Bandung, Indonesia. Portfolio, experience, skills, and certifications.",
-    "ogImage": "/images/hero.svg"
+    "ogImage": "/images/hero.jpg"
   },
   "a11y": {
     "skipToContentLabel": "Skip to content",
@@ -20,6 +20,7 @@
     "nav": [
       { "label": "About", "href": "#about" },
       { "label": "Skills", "href": "#skills" },
+      { "label": "AI", "href": "#ai" },
       { "label": "Certifications", "href": "#certifications" },
       { "label": "Experience", "href": "#experience" },
       { "label": "Portfolio", "href": "#portfolio" },
@@ -32,7 +33,7 @@
     "location": "Bandung, West Java, Indonesia",
     "tagline": "Fast learner, well-organized, responsible developer with strong experience in team and individual projects.",
     "profileImage": {
-      "src": "/images/hero.svg",
+      "src": "/images/hero.jpg",
       "alt": "Ramdhan Setiadhi profile image"
     },
     "ctas": {
@@ -62,8 +63,8 @@
           "Next.js",
           "Vue.js",
           "React Native",
-          "Express.js",
-          "Redux"
+          "Redux",
+          "Nest.js"
         ]
       },
       {
@@ -77,6 +78,43 @@
       {
         "title": "Other",
         "items": ["Git", "GitHub"]
+      }
+    ]
+  },
+  "ai": {
+    "sectionTitle": "AI Expertise",
+    "intro": "Practical AI implementation focused on building reliable workflows and developer tools.",
+    "highlight": {
+      "title": "AI Enthusiast",
+      "description": "I actively explore new AI tools and approaches, focusing on practical use cases like local LLM experimentation, automation workflows, and developer productivity."
+    },
+    "areas": [
+      {
+        "title": "Agentic workflows",
+        "items": [
+          "Use agent-style patterns for multi-step tasks (planning, tool usage, and iteration)",
+          "Design prompts and instructions to keep outputs consistent and safe"
+        ]
+      },
+      {
+        "title": "Local LLMs (LM Studio)",
+        "items": [
+          "Run open-source models locally via LM Studio",
+          "Experiment with different models for coding and Q&A use cases"
+        ]
+      },
+      {
+        "title": "Automation (n8n)",
+        "items": [
+          "Build workflow automations integrating APIs and AI",
+          "Connect AI steps with triggers, webhooks, and data pipelines"
+        ]
+      },
+      {
+        "title": "Voice Q&A tool",
+        "items": [
+          "Built a simple voice assistant that answers questions using speech-to-text + text-to-speech (TTS)"
+        ]
       }
     ]
   },
@@ -182,11 +220,18 @@
   "contact": {
     "sectionTitle": "Contact",
     "phone": "088219819580",
-    "email": "ramdhansetiadhi@gmail.com",
+    "email": "ramdhansetiadhi@mail.com",
     "linkedin": "https://www.linkedin.com/in/ramdhansetiadhi",
     "buttons": {
       "emailLabel": "Email Me",
       "linkedinLabel": "LinkedIn"
+    },
+    "modal": {
+      "title": "Contact Me",
+      "description": "Choose how you'd like to reach me.",
+      "emailOptionLabel": "Send Email",
+      "linkedinOptionLabel": "Open LinkedIn",
+      "closeLabel": "Close"
     }
   },
   "footer": {

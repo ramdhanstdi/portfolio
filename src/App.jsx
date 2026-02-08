@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from 'react'
 import Hero from './components/Hero.jsx'
 import About from './components/About.jsx'
+import AiExpertise from './components/AiExpertise.jsx'
+import ContactModal from './components/ContactModal.jsx'
 import Portfolio from './components/Portfolio.jsx'
 
 function useJsonAsset(url) {
@@ -48,24 +50,42 @@ export default function App() {
   const portfolio = useJsonAsset(portfolioUrl)
 
   const [activeTag, setActiveTag] = useState(null)
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false)
+
+  const portfolioItems = useMemo(() => {
+    const items = Array.isArray(portfolio.data) ? portfolio.data : []
+    return items.map((item) => {
+      const imageSrc = item?.image
+      return {
+        ...item,
+        image: {
+          src: imageSrc,
+          alt: `${item?.title ?? 'Project'} preview`,
+        },
+      }
+    })
+  }, [portfolio.data])
 
   const allTags = useMemo(() => {
-    const items = Array.isArray(portfolio.data) ? portfolio.data : []
+    const items = portfolioItems
     const tags = new Set()
     for (const item of items) {
       for (const t of item?.tags ?? []) tags.add(t)
     }
     return Array.from(tags).sort((a, b) => a.localeCompare(b))
-  }, [portfolio.data])
+  }, [portfolioItems])
 
   const filteredItems = useMemo(() => {
-    const items = Array.isArray(portfolio.data) ? portfolio.data : []
-    if (!activeTag) return items
-    return items.filter((i) => (i?.tags ?? []).includes(activeTag))
-  }, [portfolio.data, activeTag])
+    if (!activeTag) return portfolioItems
+    return portfolioItems.filter((i) => (i?.tags ?? []).includes(activeTag))
+  }, [portfolioItems, activeTag])
 
   function handleCtaClick() {
     document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })
+  }
+
+  function handleOpenContactModal() {
+    setIsContactModalOpen(true)
   }
 
   if (site.loading || portfolio.loading) {
@@ -93,24 +113,51 @@ export default function App() {
     )
   }
 
+  const skipLabel = site.data?.a11y?.skipToContentLabel
+  const primaryNavLabel = site.data?.a11y?.primaryNavLabel
+  const headerNav = Array.isArray(site.data?.header?.nav) ? site.data.header.nav : []
+  const footerLinks = Array.isArray(site.data?.footer?.links) ? site.data.footer.links : []
+  const footerText = site.data?.footer?.text ?? ''
+
+  const year = new Date().getFullYear()
+  const copyrightTemplate = site.data?.footer?.copyrightTemplate ?? ''
+  const copyrightText = copyrightTemplate
+    ? copyrightTemplate.replace('{year}', String(year)).replace('{name}', site.data?.hero?.name ?? '')
+    : ''
+
   return (
     <div className="min-h-dvh">
+      <ContactModal
+        open={isContactModalOpen}
+        onClose={() => setIsContactModalOpen(false)}
+        contact={site.data?.contact}
+      />
+
       <a
         href="#main"
         className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 rounded bg-white px-4 py-2 text-slate-900"
       >
-        Skip to content
+        {skipLabel}
       </a>
 
-      <Hero site={site.data} onCtaClick={handleCtaClick} />
+      <Hero
+        site={site.data}
+        navItems={headerNav}
+        navLabel={primaryNavLabel}
+        onCtaClick={handleCtaClick}
+        onContactClick={handleOpenContactModal}
+      />
 
       <main id="main">
         <About site={site.data} />
+        <AiExpertise content={site.data?.ai} />
         <Portfolio
           items={filteredItems}
           allTags={allTags}
           activeTag={activeTag}
           onChangeTag={setActiveTag}
+          content={site.data?.portfolio}
+          a11y={site.data?.a11y}
         />
       </main>
 
@@ -118,34 +165,20 @@ export default function App() {
         <div className="mx-auto max-w-6xl px-6 py-10">
           <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
             <div>
-              <p className="text-sm text-slate-300">
-                {site.data?.contactEmail ? (
-                  <>
-                    Contact:{' '}
-                    <a
-                      className="underline underline-offset-4 hover:text-white"
-                      href={`mailto:${site.data.contactEmail}`}
-                    >
-                      {site.data.contactEmail}
-                    </a>
-                  </>
-                ) : (
-                  <>Thanks for visiting.</>
-                )}
-              </p>
-              <p className="mt-2 text-xs text-slate-400">© {new Date().getFullYear()} {site.data?.name ?? 'Portfolio'}</p>
+              <p className="text-sm text-slate-300">{footerText}</p>
+              {copyrightText ? <p className="mt-2 text-xs text-slate-400">{copyrightText}</p> : null}
             </div>
 
-            {Array.isArray(site.data?.social) && site.data.social.length > 0 ? (
-              <nav aria-label="Social links">
+            {footerLinks.length > 0 ? (
+              <nav aria-label={site.data?.a11y?.socialLinksLabel}>
                 <ul className="flex flex-wrap gap-4">
-                  {site.data.social.map((s) => (
-                    <li key={s.url}>
+                  {footerLinks.map((s) => (
+                    <li key={s.href}>
                       <a
                         className="text-sm text-slate-300 underline underline-offset-4 hover:text-white"
-                        href={s.url}
-                        target="_blank"
-                        rel="noreferrer"
+                        href={s.href}
+                        target={s.external ? '_blank' : undefined}
+                        rel={s.external ? 'noreferrer' : undefined}
                       >
                         {s.label}
                       </a>

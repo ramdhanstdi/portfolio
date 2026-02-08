@@ -1,10 +1,10 @@
-export default function PortfolioCard({ item, onTagClick }) {
+export default function PortfolioCard({ item, onTagClick, links }) {
   return (
     <article className="group overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/30">
       <div className="relative">
         <img
-          src={item.image}
-          alt={`${item.title} preview`}
+          src={item.image?.src}
+          alt={item.image?.alt}
           className="h-44 w-full object-cover"
           loading="lazy"
         />
@@ -37,7 +37,7 @@ export default function PortfolioCard({ item, onTagClick }) {
               target="_blank"
               rel="noreferrer"
             >
-              Live
+              {links?.liveLabel}
             </a>
           ) : null}
           {item.repoUrl ? (
@@ -47,7 +47,7 @@ export default function PortfolioCard({ item, onTagClick }) {
               target="_blank"
               rel="noreferrer"
             >
-              Repo
+              {links?.repoLabel}
             </a>
           ) : null}
         </div>

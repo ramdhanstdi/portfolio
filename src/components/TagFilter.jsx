@@ -1,6 +1,6 @@
-export default function TagFilter({ tags, activeTag, onChange }) {
+export default function TagFilter({ tags, activeTag, onChange, label, allLabel }) {
   return (
-    <div className="flex flex-wrap gap-2" role="group" aria-label="Portfolio tag filter">
+    <div className="flex flex-wrap gap-2" role="group" aria-label={label}>
       <button
         type="button"
         className={
@@ -11,7 +11,7 @@ export default function TagFilter({ tags, activeTag, onChange }) {
         onClick={() => onChange?.(null)}
         aria-pressed={!activeTag}
       >
-        All
+        {allLabel}
       </button>
 
       {tags.map((t) => {

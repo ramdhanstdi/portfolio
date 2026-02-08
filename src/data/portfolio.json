@@ -1,27 +1,106 @@
 [
   {
     "id": "project-1",
-    "title": "Product Landing Page",
-    "description": "A responsive landing page with accessible components and a clean layout. Includes a lightweight design system and a component-driven structure.",
-    "tags": ["React", "Tailwind", "Accessibility"],
-    "image": "/images/project-1.svg",
-    "liveUrl": "https://example.com",
-    "repoUrl": "https://github.com/your-handle/project-1"
+    "title": "Gista Pembayaran PO - BCA",
+    "description": "Internal web application for managing and monitoring Purchase Order payments at BCA.",
+    "tags": ["Vue.js", "JavaScript", "Tailwind CSS", "Front-End"],
+    "image": "/images/projects/gista-po.png",
+    "liveUrl": ""
   },
   {
     "id": "project-2",
-    "title": "Dashboard UI",
-    "description": "A dashboard prototype featuring cards, charts placeholders, and keyboard-friendly navigation. Built mobile-first and optimized for clarity.",
-    "tags": ["UI", "React"],
-    "image": "/images/project-2.svg",
-    "repoUrl": "https://github.com/your-handle/project-2"
+    "title": "Gista Jurnal - BCA",
+    "description": "Super app for internal BCA usage, focusing on journal management and reporting.",
+    "tags": ["Vue.js", "JavaScript", "Tailwind CSS", "Front-End"],
+    "image": "/images/projects/gista-jurnal.png",
+    "liveUrl": ""
   },
   {
     "id": "project-3",
-    "title": "API Status Monitor",
-    "description": "A small app that displays service status with filtering and detail views. Focused on sensible UX and readable code.",
-    "tags": ["Vite", "Performance"],
-    "image": "/images/project-3.svg",
-    "liveUrl": "https://example.com"
+    "title": "Bagi Toko Online Shop",
+    "description": "E-commerce base template with full dynamic data for users who want to build their own online shop.",
+    "tags": ["Next.js", "TypeScript", "Tailwind CSS", "E-Commerce"],
+    "image": "/images/projects/bagi-toko.png",
+    "liveUrl": ""
+  },
+  {
+    "id": "project-4",
+    "title": "Gista Masterdata - BCA",
+    "description": "Internal system for managing master data used across multiple BCA internal services.",
+    "tags": ["Vue.js", "JavaScript", "Tailwind CSS", "Front-End"],
+    "image": "/images/projects/gista-masterdata.png",
+    "liveUrl": ""
+  },
+  {
+    "id": "project-5",
+    "title": "BRI Sales Spotlight",
+    "description": "Sales monitoring and reporting system with interactive map integration.",
+    "tags": ["Next.js", "Node.js", "Express.js", "PostgreSQL", "Tailwind CSS"],
+    "image": "/images/projects/bri-sales.png",
+    "liveUrl": ""
+  },
+  {
+    "id": "project-6",
+    "title": "SNJ Admin",
+    "description": "Admin dashboard to manage product restocking, users, stores, and order management for marketplace.",
+    "tags": ["React.js", "Redux", "Tailwind CSS", "Admin Dashboard"],
+    "image": "/images/projects/snj-admin.png",
+    "liveUrl": ""
+  },
+  {
+    "id": "project-7",
+    "title": "SNJ Marketplace",
+    "description": "E-commerce platform for customers to order meat products directly from SNJ partners.",
+    "tags": ["React.js", "Redux", "Tailwind CSS", "Marketplace"],
+    "image": "/images/projects/snj-marketplace.png",
+    "liveUrl": ""
+  },
+  {
+    "id": "project-8",
+    "title": "Atlaz Admin",
+    "description": "Admin panel for content management and access control to Learning Management System.",
+    "tags": ["React.js", "Express.js", "SASS"],
+    "image": "/images/projects/atlaz-admin.png",
+    "liveUrl": ""
+  },
+  {
+    "id": "project-9",
+    "title": "Atlaz Analytic",
+    "description": "Analytics dashboard for internal teams and foundations to display business insights and metrics.",
+    "tags": ["Next.js", "React.js", "Node.js", "MongoDB"],
+    "image": "/images/projects/atlaz-analytic.png",
+    "liveUrl": ""
+  },
+  {
+    "id": "project-10",
+    "title": "Atlaz LMS",
+    "description": "Learning Management System for teachers and students with class, material, and task management.",
+    "tags": ["React.js", "Express.js", "JavaScript", "SASS", "LMS"],
+    "image": "/images/projects/atlaz-lms.png",
+    "liveUrl": ""
+  },
+  {
+    "id": "project-11",
+    "title": "Atlaz Website",
+    "description": "Landing page and company profile website built using Next.js and Tailwind CSS.",
+    "tags": ["Next.js", "Tailwind CSS", "Landing Page"],
+    "image": "/images/projects/atlaz-website.png",
+    "liveUrl": ""
+  },
+  {
+    "id": "project-12",
+    "title": "Parabot E-Commerce",
+    "description": "Furniture e-commerce platform for buying and selling products online.",
+    "tags": ["Next.js", "Node.js", "PostgreSQL", "Redux", "E-Commerce"],
+    "image": "/images/projects/parabot.png",
+    "liveUrl": ""
+  },
+  {
+    "id": "project-13",
+    "title": "STD iWallet",
+    "description": "Digital wallet application for payments and money transfers with real-time notifications.",
+    "tags": ["React Native", "Express.js", "PostgreSQL", "Redux", "Fintech"],
+    "image": "/images/projects/std-iwallet.png",
+    "liveUrl": ""
   }
 ]
